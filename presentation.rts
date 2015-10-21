@@ -61,6 +61,18 @@ Fondazioni
 
 ----
 
+	For most users, the filesystem is the most visible aspect of an operating system.
+
+	-- Silberschatz & Galvin, Operating System Concepts, 7th ed.
+
+----
+
+	The filesystem consists of two distinct parts: a collection of files, each storing related data, and a directory structure, which organizes and provides information about all the files in the system.
+
+	-- Silberschatz & Galvin, Operating System Concepts, 7th ed.
+
+----
+
 	The most important job of UNIX is to provide a filesystem.
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
@@ -196,7 +208,7 @@ Implementazione
 
 Precursori
 
-	Earlier VFS implementations include Sun's VFS (in SunOS version 2.0, circa 1985) and IBM and Microsoft®'s "Installable File System" for IBM OS/2.
+	Earlier VFS implementations include Sun's VFS (in SunOS version 2.0, circa 1985) and IBM and Microsoft's "Installable File System" for IBM OS/2.
 
 	-- M. Tim Jones, Anatomy of the Linux virtual filesystem switch
 
@@ -468,11 +480,13 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ----
 
-Prospettive:
+Prospettive
 
-* estensione ad altri formati binari
-* astrazione dal formato
-* interfaccia verso `exec()`
+	estensione ad altri formati binari
+
+	astrazione dal formato
+
+	interfaccia verso `exec()`
 
 factors
 -------
