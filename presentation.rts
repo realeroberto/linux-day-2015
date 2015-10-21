@@ -172,24 +172,29 @@ VFS
 
 ----
 
-**Astrazione**
+Astrazione
 
 	File: modello comune
+
 	Strutture dati: superblock, inode, file, dentry
+
 	Operazioni
+
 	Object-oriented
 
 ----
 
-**Implementazione**
+Implementazione
 
 	Disk data structures
+
 	Memory data structures
+
 	Disk space management
 
 ----
 
-**Precursori**
+Precursori
 
 	Earlier VFS implementations include Sun's VFS (in SunOS version 2.0, circa 1985) and IBM and Microsoft®'s "Installable File System" for IBM OS/2.
 
