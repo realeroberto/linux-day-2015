@@ -1,41 +1,85 @@
 :data-transition-duration: 2000
 :skip-help: true
 :css: presentation.css
+:data-x: r1200
 
 .. title: All'ombra del Leviatano
 
 ----
 
+Sabato 24 Ottobre
+
+#LDROMA15
+---------
+
+http://lug.uniroma2.it/ld15/
+
+----
 
 All'ombra del Leviatano
 =======================
 
 ----
 
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+http://linux-day-2015.github.io/
 
 ----
 
+File e filesystem
+=================
 
-File system
-===========
+	Die Filen hat der liebe Gott gemacht, alles andere ist Menschenwerk.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	-- Leopold Kronecker (apocrifo)
 
+----
+
+*file* is the new *byte*
+
+----
+
+	All files are created equal.
+
+	-- Anonimo
+
+----
+
+	Everything is a file.
+
+	-- Anonimo
+
+----
+
+	All file systems are not created equal.
+
+	-- 11th USENIX Symposium on Operating Systems Design and Implementation (OSDI 14)
+
+----
 
 Fondazioni
 ==========
 
 ----
 
-	The most important job of UNIX is to provide a file system.
+	The most important job of UNIX is to provide a filesystem.
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
 
 ----
 
 	A file contains whatever information the user places on it, for example symbolic or binary (object) programs.  *No particular structuring is expected by the system.*
+
+	-- Ritchie & Thompson, The UNIX TimeSharing System
+
+----
+
+	A file does not exist within a particular directory; the directory entry for a file consists merely of its name and a pointer to the information actually describing the file.
+
+	-- Ritchie & Thompson, The UNIX TimeSharing System
+
+----
+
+There is a threefold advantage in treating I/O devices this way: file and device I/O are as similar as possible; file and device names have the same syntax and meaning, so that a program expecting a file name as a parameter can be passed a device name; finally, special files are subject to the same protection mechanism as regular files.
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
 
@@ -83,12 +127,31 @@ il perimetro di cosa è un file è
 
 ----
 
-la *sintassi* e la *semantica* di un file sono fissate dal kernel
+la *sintassi* e la *semantica* del filesystem sono fissate dal kernel
 
 ----
 
 Il leviatano
 ============
+
+----
+
+
+	VFS: oltre 65 mila righe di codice già nel 2008
+
+	-- Galloway et al., Model-Checking the Linux Virtual File System
+
+----
+
+approccio conservativo, kernel-centrico
+
+----
+
+debug difficile
+
+----
+
+l'utente non amministratore semplicemente *non può*
 
 ----
 
@@ -98,47 +161,85 @@ Il leviatano
 
 ----
 
-	VFS: oltre 65 mila righe di codice già nel 2008
-
-	-- Galloway et al., Model-Checking the Linux Virtual File System
+VFS
+===
 
 ----
 
-I precursori
+Astrazione
+
+* File: modello comune
+* Strutture dati: superblock, inode, file, dentry
+* Operazioni
+* Object-oriented
+
+----
+
+Implementazione
+
+* Disk data structures
+* Memory data structures
+* Disk space management
+
+----
+
+Precursori:
+
+	Earlier VFS implementations include Sun's VFS (in SunOS version 2.0, circa 1985) and IBM and Microsoft®'s "Installable File System" for IBM OS/2.
+
+	-- M. Tim Jones, Anatomy of the Linux virtual filesystem switch
+
+----
+
+Altre strade
 ============
 
 ----
 
-Hurd
-
+Synthetic Files
 
 ----
 
-Linux VFS
+*9P*: Plan 9 Filesystem Protocol
 
-Linux filesystem
-. Linux virtual filesystem (VFS) overview
-. Common file model
-. Superblock, inode, file, dentry
-. Object-oriented
-. Ext2 filesystem
-. Disk data structures
-. Superblock, block group, inodes
-. Memory data structures
-. Disk space management
+----
 
+*puffs*: Pass-to-Userspace Framework File System su NetBSD
 
-Filesystem in Userspace
-=======================
+----
 
+Hurd translators
+================
 
-Precursori
-==========
+----
 
-* Synthetic Files, 
-* 9P, alias Plan 9 Filesystem Protocol, alias Styx
-* installable files
-* XXX
+	A translator is simply a normal program acting as an object server and participating in the Hurd's distributed virtual filesystem.
+
+	-- https://www.gnu.org/software/hurd/hurd/translator.html
+
+----
+
+	It is so-called because it typically exports a filesystem (although need not: cf. auth, proc and pfinet) and thus translates object invocations into calls appropriate for the backing store (e.g., ext2 filesystem, nfs server, etc.).
+
+	-- https://www.gnu.org/software/hurd/hurd/translator.html
+
+----
+
+	Another way of putting it is that it translates from one representation of a data structure into another representation, for example from the on-disk ext2 data layout to a traditional filesystem hierarchy, or from a XML file to a virtual hierarchical manifestation.
+
+	-- https://www.gnu.org/software/hurd/hurd/translator.html
+
+----
+
+	A translator is usually registered with a specific filesystem node by using the settrans command.
+
+	-- https://www.gnu.org/software/hurd/hurd/translator.html
+
+----
+
+	Translators do not require any special privilege to run. The privilege they require is simply that to access the indiviudal resources they use.
+
+	-- https://www.gnu.org/software/hurd/hurd/translator.html
 
 ----
 
@@ -149,20 +250,200 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 
 ----
 
-Esempi
-======
+FUSE
+====
+
+Filesystem in Userspace
+------------------------
+
+----
+
+	With FUSE it is possible to implement a fully functional filesystem in a userspace program. 
+
+	-- http://fuse.sourceforge.net/
+
+----
+
+Autore Miklos Szeredi
+
+Licenze GPL + LGPL
+
+----
+
+Features include...
+
+----
+
+	simple library API
+
+----
+
+	simple installation (no need to patch or recompile the kernel)
+
+----
+
+	secure implementation
+
+----
+
+	userspace-kernel interface is very efficient
+
+----
+
+	usable by non privileged users
+
+	-- http://fuse.sourceforge.net/
+
+----
+
+Interazione attraverso un file (ancora!): */dev/fuse*.
+
+----
+
+	FUSE is a userspace filesystem framework.  It consists of a kernel module (fuse.ko), a userspace library (libfuse.*) and a mount utility (fusermount).
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+	One of the most important features of FUSE is allowing secure, non-privileged mounts.  This opens up new possibilities for the use of filesystems.  A good example is sshfs: a secure network filesystem using the sftp protocol.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+	Since the mount() system call is a privileged operation, a helper program (fusermount) is needed, which is installed setuid root.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+Vocabolario
+===========
+
+----
+
+Userspace filesystem
+
+	A filesystem in which data and metadata are provided by an ordinary userspace process.  The filesystem can be accessed normally through the kernel interface.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+Filesystem daemon
+
+	The process(es) providing the data and metadata of the filesystem.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+Non-privileged mount (or user mount)
+
+	A userspace filesystem mounted by a non-privileged (non-root) user.  The filesystem daemon is running with the privileges of the mounting user.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+Filesystem connection
+
+	A connection between the filesystem daemon and the kernel.  The connection exists until either the daemon dies, or the filesystem is umounted.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+Mount owner
+
+	The user who does the mounting.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+User
+
+	The user who is performing filesystem operations.
+
+	-- http://fuse.sourceforge.net/doxygen/index.html
+
+----
+
+Bestiario
+=========
+
+----
+
+PNGdrive
+
+	PNG meets Steganography meets Fuse: the easiest way to have plausible deniability.
+
+	-- https://code.google.com/p/pngdrive/
+
+----
+
+GlusterFS
+
+	GlusterFS is a scalable network filesystem.  Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks.
+
+	-- http://www.gluster.org/
+
+----
+
+WikipediaFS
+
+	WikipediaFS is a virtual filesystem which allows users to view and edit Wikipedia articles as if they were real files on a local disk drive. 
+
+	-- https://en.wikipedia.org/wiki/WikipediaFS
+
+----
+
+Incarnazioni
+============
+
+----
+
+Mani in pasta
+=============
+
+----
+
+elfs
+----
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ----
 
+Prospettive:
 
-Bibliografia
-============
+* estensione ad altri formati binari
+* astrazione dal formato
+* interfaccia verso `exec()`
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu\
-a. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \
-irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi\
-datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+factors
+-------
 
-* []
+
+----
+
+Colofóne
+========
+
+Composto con vim e Hovercraft! su Ubuntu Saucy.
+
+Featuring Google Fonts: Libre Baskerville, Racing Sans One, Satisfy.
+
+----
+
+exit()
+======
+
+----
+
+Roberto Reale
+
+http://linux-day-2015.github.io/
+
