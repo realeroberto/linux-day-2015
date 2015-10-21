@@ -28,6 +28,8 @@ http://linux-day-2015.github.io/
 File e filesystem
 =================
 
+----
+
 	Die Dataien hat der liebe Gott gemacht, alles andere ist Menschenwerk.
 
 	-- Leopold Kronecker (apocrifo)
@@ -61,13 +63,13 @@ Fondazioni
 
 ----
 
-	For most users, the filesystem is the most visible aspect of an operating system.
+	For most users, the filesystem is *the most visible aspect of an operating system*.
 
 	-- Silberschatz & Galvin, Operating System Concepts, 7th ed.
 
 ----
 
-	The filesystem consists of two distinct parts: a collection of files, each storing related data, and a directory structure, which organizes and provides information about all the files in the system.
+	The filesystem consists of two distinct parts: a *collection of files*, each storing related data, and a *directory structure*, which organizes and provides information about all the files in the system.
 
 	-- Silberschatz & Galvin, Operating System Concepts, 7th ed.
 
@@ -79,7 +81,9 @@ Fondazioni
 
 ----
 
-	A file contains whatever information the user places on it, for example symbolic or binary (object) programs.  *No particular structuring is expected by the system.*
+	A file contains whatever information the user places on it, for example symbolic or binary (object) programs.
+
+	*No particular structuring is expected by the system.*
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
 
@@ -161,7 +165,9 @@ Il leviatano
 
 ----
 
-	approccio conservativo, kernel-centrico
+	approccio conservativo
+
+	kernel-centrico
 
 ----
 
@@ -474,9 +480,22 @@ Mani in pasta
 ----
 
 elfs
+
+	A simple (FUSE) filesystem on top of ELF objects.
+
+	-- https://github.com/linux-day-2015/elfs
+
 ----
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+::
+
+	$ elfs `which fdup` /tmp/elf
+
+	$ ls -l /tmp/elf/
+	total 0
+	drw-r--r-- 1 root root 0 Jan  1  1970 header
+	drw-r--r-- 1 root root 0 Jan  1  1970 libs
+	drw-r--r-- 1 root root 0 Jan  1  1970 sections
 
 ----
 
