@@ -79,13 +79,13 @@ Fondazioni
 
 ----
 
-There is a threefold advantage in treating I/O devices this way: file and device I/O are as similar as possible; file and device names have the same syntax and meaning, so that a program expecting a file name as a parameter can be passed a device name; finally, special files are subject to the same protection mechanism as regular files.
+	There is a threefold advantage in treating I/O devices this way: file and device I/O are as similar as possible; file and device names have the same syntax and meaning, so that a program expecting a file name as a parameter can be passed a device name; finally, special files are subject to the same protection mechanism as regular files.
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
 
 ----
 
-Perhaps paradoxically, the success of UNIX is largely due to the fact that it was not designed to meet any predefined objectives.
+	Perhaps paradoxically, the success of UNIX is largely due to the fact that it was not designed to meet any predefined objectives.
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
 
@@ -149,15 +149,15 @@ Il leviatano
 
 ----
 
-approccio conservativo, kernel-centrico
+	approccio conservativo, kernel-centrico
 
 ----
 
-debug difficile
+	debug difficile
 
 ----
 
-l'utente non amministratore semplicemente *non può*
+	l'utente non amministratore semplicemente *non può*
 
 ----
 
@@ -172,24 +172,24 @@ VFS
 
 ----
 
-Astrazione
+**Astrazione**
 
-* File: modello comune
-* Strutture dati: superblock, inode, file, dentry
-* Operazioni
-* Object-oriented
-
-----
-
-Implementazione
-
-* Disk data structures
-* Memory data structures
-* Disk space management
+	File: modello comune
+	Strutture dati: superblock, inode, file, dentry
+	Operazioni
+	Object-oriented
 
 ----
 
-Precursori:
+**Implementazione**
+
+	Disk data structures
+	Memory data structures
+	Disk space management
+
+----
+
+**Precursori**
 
 	Earlier VFS implementations include Sun's VFS (in SunOS version 2.0, circa 1985) and IBM and Microsoft®'s "Installable File System" for IBM OS/2.
 
