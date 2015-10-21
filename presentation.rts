@@ -1,5 +1,6 @@
 :data-transition-duration: 2000
 :skip-help: true
+:css: presentation.css
 
 .. title: All'ombra del Leviatano
 
@@ -8,6 +9,9 @@
 
 All'ombra del Leviatano
 =======================
+
+----
+
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
@@ -20,12 +24,121 @@ File system
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 
+Fondazioni
+==========
+
 ----
 
-Paradosso di Unix
-=================
+	The most important job of UNIX is to provide a file system.
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+	-- Ritchie & Thompson, The UNIX TimeSharing System
+
+----
+
+	A file contains whatever information the user places on it, for example symbolic or binary (object) programs.  *No particular structuring is expected by the system.*
+
+	-- Ritchie & Thompson, The UNIX TimeSharing System
+
+----
+
+Precisazioni
+============
+
+----
+
+	The whole point with "everything is a file" is not that you have some random filename, but the fact that *you can use common tools to operate on different things*.
+
+	-- Linux Torvalds, 8 giugno 2002
+
+----
+
+	The UNIX philosophy is often quoted as "everything is a file", but that really means *everything is a stream of bytes*.
+
+	-- Linux Torvalds, 8 marzo 2007
+
+----
+
+	It should be just a "read()", and then *people can use general libraries and treat all sources the same*.
+
+	-- Linux Torvalds, 8 marzo 2007
+
+----
+
+Il paradosso
+============
+
+----
+
+everything is a file
+
+*ma*
+
+il perimetro di cosa è un file non è flessible ad libitum
+
+----
+
+il perimetro di cosa è un file è
+
+*fissato dal kernel*
+
+----
+
+la *sintassi* e la *semantica* di un file sono fissate dal kernel
+
+----
+
+Il leviatano
+============
+
+----
+
+	ecce spes eius frustrabitur eum et videntibus cunctis praecipitabitur
+
+	-- Iob, 41, 1
+
+----
+
+	VFS: oltre 65 mila righe di codice già nel 2008
+
+	-- Galloway et al., Model-Checking the Linux Virtual File System
+
+----
+
+I precursori
+============
+
+----
+
+Hurd
+
+
+----
+
+Linux VFS
+
+Linux filesystem
+. Linux virtual filesystem (VFS) overview
+. Common file model
+. Superblock, inode, file, dentry
+. Object-oriented
+. Ext2 filesystem
+. Disk data structures
+. Superblock, block group, inodes
+. Memory data structures
+. Disk space management
+
+
+Filesystem in Userspace
+=======================
+
+
+Precursori
+==========
+
+* Synthetic Files, 
+* 9P, alias Plan 9 Filesystem Protocol, alias Styx
+* installable files
+* XXX
 
 ----
 
@@ -40,3 +153,16 @@ Esempi
 ======
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+----
+
+
+Bibliografia
+============
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqu\
+a. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute \
+irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupi\
+datat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+* []
