@@ -28,7 +28,7 @@ http://linux-day-2015.github.io/
 File e filesystem
 =================
 
-	Die Filen hat der liebe Gott gemacht, alles andere ist Menschenwerk.
+	Die Dataien hat der liebe Gott gemacht, alles andere ist Menschenwerk.
 
 	-- Leopold Kronecker (apocrifo)
 
@@ -80,6 +80,12 @@ Fondazioni
 ----
 
 There is a threefold advantage in treating I/O devices this way: file and device I/O are as similar as possible; file and device names have the same syntax and meaning, so that a program expecting a file name as a parameter can be passed a device name; finally, special files are subject to the same protection mechanism as regular files.
+
+	-- Ritchie & Thompson, The UNIX TimeSharing System
+
+----
+
+Perhaps paradoxically, the success of UNIX is largely due to the fact that it was not designed to meet any predefined objectives.
 
 	-- Ritchie & Thompson, The UNIX TimeSharing System
 
@@ -208,6 +214,13 @@ Synthetic Files
 
 ----
 
+	A filesystem is a protocol translator: it interprets incoming requests and transforms them into a form suitable to store and retrieve data.
+
+	-- Antti Kantee, Send and Receive of File System Protocols
+
+----
+
+
 Hurd translators
 ================
 
@@ -240,13 +253,6 @@ Hurd translators
 	Translators do not require any special privilege to run. The privilege they require is simply that to access the indiviudal resources they use.
 
 	-- https://www.gnu.org/software/hurd/hurd/translator.html
-
-----
-
-FUSE
-====
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 
 ----
 
@@ -400,8 +406,48 @@ WikipediaFS
 
 ----
 
+Couchfuse
+
+	Couchfuse is a FUSE filesystem that exposes Couchdb databases as filesystem folder.
+
+	-- http://narkisr.github.io/couch-fuse/
+
+----
+
+CephFS
+
+	FUSE come vivaio, come coltura di giovani filesystem.
+
+	CephFS è nel kernel dalla versione 2.6.34.
+
+----
+
 Incarnazioni
 ============
+
+----
+
+GO-FUSE
+
+	As fast as libfuse using the gc compiler for single threaded loads.
+
+	-- https://github.com/hanwen/go-fuse
+
+----
+
+Fuse4js
+
+	Fuse4js currently implements a subset of all FUSE file operations.
+
+	-- https://github.com/bcle/fuse4js
+
+----
+
+fusepy
+
+	Simple ctypes bindings for FUSE.
+
+	-- https://github.com/linux-day-2015/fusepy
 
 ----
 
@@ -426,6 +472,7 @@ Prospettive:
 factors
 -------
 
+etcdfs
 
 ----
 
