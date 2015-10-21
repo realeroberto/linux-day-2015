@@ -153,7 +153,7 @@ la *sintassi* e la *semantica* del filesystem sono fissate dal kernel
 
 ----
 
-Il leviatano
+Il Leviatano
 ============
 
 ----
@@ -284,6 +284,10 @@ FUSE
 
 Filesystem in Userspace
 ------------------------
+
+----
+
+.. image:: images/fuse_structure.png
 
 ----
 
@@ -439,7 +443,7 @@ Couchfuse
 
 CephFS
 
-	FUSE come vivaio, come coltura di giovani filesystem.
+	FUSE come *vivaio*, come *coltura* di giovani filesystem.
 
 	CephFS è nel kernel dalla versione 2.6.34.
 
@@ -507,17 +511,42 @@ Prospettive
 
 	interfaccia verso `exec()`
 
-factors
--------
+----
+
+factors: un divertissement
+
+	Ammette solo, come nomi di cartelle, *numeri interi*, e le popola di file pari ai *fattori*.
+
+	Costruito su fusepy.
+
+	https://github.com/linux-day-2015/fusepy/blob/master/examples/factors.py
+
+----
+
+::
+
+	$ mkdir /tmp/loopback /tmp/mountpoint
+	$ sudo ./factors.py /tmp/loopback /tmp/mountpoint &
+	$ sudo mkdir /tmp/mountpoint/54334
+	$ ls /tmp/mountpoint/54334
+	1  14  2  27167  3881  54334  7  7762
+
+----
 
 etcdfs
+
+	A replicated filesystem on top of etcd.
+
+	Progetto appena nato.  *Stay tuned...*
+
+	https://github.com/linux-day-2015/etcdfs
 
 ----
 
 Colofóne
 ========
 
-Composto con vim e Hovercraft! su Ubuntu Saucy.
+Presentazione composta con vim e Hovercraft! su Ubuntu Saucy.
 
 Featuring Google Fonts: Libre Baskerville, Racing Sans One, Satisfy.
 
