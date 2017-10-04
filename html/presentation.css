@@ -80,7 +80,8 @@ pre.highlight {
         position: static !important;
         transform: none !important;
         transform-style: flat !important;
-        width: 700px !important;
+        width:  700px !important;
+        height: 500px !important;
         margin: auto !important;
     }
 
