@@ -2,6 +2,8 @@
 
 My [talk](https://robertoreale.me/linux-day-2015) at the [Linux Day 2015](http://lug.uniroma2.it/ld15/) in Rome (in Italian).
 
+The slides are available in a printable format at [issuu](https://issuu.com/roberto-reale/docs/linux-day-2015).
+
 ## English Abstract
 
 TODO
