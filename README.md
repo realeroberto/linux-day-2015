@@ -1,4 +1,4 @@
-# In the Shadow of the Leviathan: Filesystem in Userspace
+# All'ombra del Leviatano: Filesystem in Userspace
 
 My [talk](https://robertoreale.me/linux-day-2015) at the [Linux Day 2015](http://lug.uniroma2.it/ld15/) in Rome (in Italian).
 
