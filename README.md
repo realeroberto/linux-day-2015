@@ -18,7 +18,7 @@ L’argomento ha peraltro un suo interesse anche dal punto di vista teorico, in 
 
 Si intende concludere l’intervento presentando un semplice “working example”, un’implementazione minimale ma funzionante di un “toy file system”.
 
-## License notice
+## License Notice
 
 This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
 
