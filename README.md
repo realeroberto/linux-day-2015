@@ -1,4 +1,12 @@
-# All’ombra del leviatano: Filesystem in Userspace
+# In the Shadow of the Leviathan: Filesystem in Userspace
+
+My talk at the [Linux Day 2015](http://lug.uniroma2.it/ld15/) in Rome (in Italian).
+
+## English Abstract
+
+TODO
+
+## Abstract in italiano
 
 L’intervento propone una brevissima introduzione storica e una panoramica tecnica di FUSE, la geniale combinazione di codice kernel e di API utente che consente di implementare, con sforzo ridotto, file system direttamente in user space.
 
