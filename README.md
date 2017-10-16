@@ -6,7 +6,11 @@ The slides are available in a printable format at [issuu](https://issuu.com/robe
 
 ## English Abstract
 
-TODO
+I offer a brief historical introduction as well as a technical overview of FUSE, an ingenious combination of a userspace interface and kernel code that allows us to implement, effortlessly, a filesystem in userspace. The reference implementation is fully FOSS, being covered by GPL for the kernel part, and by LGPL for the C library.
+
+From a computer-theoretical point of view, through FUSE the Linux kernel draw closer to more "academic", microkernel-based operating systems, like the Hurd.
+
+A minimal but functional implementation of a toy filesystem is proposed as a working example.
 
 ## Abstract in italiano
 
