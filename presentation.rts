@@ -562,13 +562,11 @@ elfs
 
 ----
 
-::
+* estensione ad altri formati binari
 
-	estensione ad altri formati binari
+* astrazione dal formato
 
-	astrazione dal formato
-
-	interfaccia verso `exec()`
+* interfaccia verso `exec()`
 
 ----
 
