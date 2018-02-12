@@ -546,7 +546,7 @@ elfs
 
 	Autore: Guillaume Leconte
 
-	-- https://github.com/robertoreale/elfs
+	-- https://github.com/pozdnychev/elfs
 
 ----
 
@@ -578,7 +578,7 @@ etcd-fs
 
 	Autore: Jonathan Leibiusky
 
-	-- https://github.com/robertoreale/etcd-fs
+	-- https://github.com/xetorthio/etcd-fs
 
 ----
 
@@ -588,7 +588,7 @@ fusepy
 
 	Autore: Terence Honles
 
-	-- https://github.com/robertoreale/fusepy
+	-- https://github.com/fusepy/fusepy
 
 ----
 
