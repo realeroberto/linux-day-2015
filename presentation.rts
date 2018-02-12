@@ -524,38 +524,6 @@ Bestiario
 
 ----
 
-PNGdrive
-
-	PNG meets Steganography meets Fuse: the easiest way to have plausible deniability.
-
-	-- https://code.google.com/p/pngdrive/
-
-----
-
-GlusterFS
-
-	GlusterFS is a scalable network filesystem.  Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks.
-
-	-- http://www.gluster.org/
-
-----
-
-WikipediaFS
-
-	WikipediaFS is a virtual filesystem which allows users to view and edit Wikipedia articles as if they were real files on a local disk drive. 
-
-	-- https://en.wikipedia.org/wiki/WikipediaFS
-
-----
-
-Couchfuse
-
-	Couchfuse is a FUSE filesystem that exposes Couchdb databases as filesystem folder.
-
-	-- http://narkisr.github.io/couch-fuse/
-
-----
-
 CephFS
 
 	FUSE come *vivaio*, come *coltura* di giovani filesystem.
@@ -564,29 +532,11 @@ CephFS
 
 ----
 
-Incarnazioni
-============
+Couchfuse
 
-----
+	Couchfuse is a FUSE filesystem that exposes Couchdb databases as filesystem folder.
 
-GO-FUSE
-
-	As fast as libfuse using the gc compiler for single threaded loads.
-
-	-- https://github.com/hanwen/go-fuse
-
-----
-
-Fuse4js
-
-	Fuse4js currently implements a subset of all FUSE file operations.
-
-	-- https://github.com/bcle/fuse4js
-
-----
-
-Mani in pasta
-=============
+	-- http://narkisr.github.io/couch-fuse/
 
 ----
 
@@ -612,13 +562,23 @@ elfs
 
 ----
 
-Prospettive
+::
 
 	estensione ad altri formati binari
 
 	astrazione dal formato
 
 	interfaccia verso `exec()`
+
+----
+
+etcd-fs
+
+	A replicated filesystem on top of etcd.
+
+	Autore: Jonathan Leibiusky
+
+	-- https://github.com/robertoreale/etcd-fs
 
 ----
 
@@ -632,34 +592,27 @@ fusepy
 
 ----
 
-factors: un divertissement
+GlusterFS
 
-	Ammette solo, come nomi di cartelle, *numeri interi*, e le popola di file pari ai *fattori*.
+	GlusterFS is a scalable network filesystem.  Using common off-the-shelf hardware, you can create large, distributed storage solutions for media streaming, data analysis, and other data- and bandwidth-intensive tasks.
 
-	-- https://github.com/robertoreale/fusepy/blob/master/examples/factors.py
-
-----
-
-::
-
-	$ mkdir /tmp/loopback /tmp/mountpoint
-	$ sudo ./factors.py /tmp/loopback /tmp/mountpoint &
-
-::
-
-	$ sudo mkdir /tmp/mountpoint/54334
-	$ ls /tmp/mountpoint/54334
-	1  14  2  27167  3881  54334  7  7762
+	-- http://www.gluster.org/
 
 ----
 
-etcd-fs
+PNGdrive
 
-	A replicated filesystem on top of etcd.
+	PNG meets Steganography meets Fuse: the easiest way to have plausible deniability.
 
-	Autore: Jonathan Leibiusky
+	-- https://code.google.com/p/pngdrive/
 
-	-- https://github.com/robertoreale/etcd-fs
+----
+
+WikipediaFS
+
+	WikipediaFS is a virtual filesystem which allows users to view and edit Wikipedia articles as if they were real files on a local disk drive. 
+
+	-- https://en.wikipedia.org/wiki/WikipediaFS
 
 ----
 
