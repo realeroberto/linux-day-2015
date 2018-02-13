@@ -1,8 +1,10 @@
 # All'ombra del Leviatano: Filesystem in Userspace
 
-My [talk](https://robertoreale.me/linux-day-2015) at the [Linux Day 2015](http://lug.uniroma2.it/ld15/) in Rome (in Italian).
+My talk at the [Linux Day 2015](http://lug.uniroma2.it/ld15/) in Rome (in Italian).
 
-The slides are available in a printable format at [issuu](https://issuu.com/roberto-reale/docs/linux-day-2015) as well as at [SlideShare](https://www.slideshare.net/robertoreale/allombra-del-leviatano-filesystem-in-userspace).
+The [`master`](https://github.com/robertoreale/linux-day-2015/tree/master) branch contains the source code, whilst the [`gh-pages`](https://github.com/robertoreale/linux-day-2015/tree/gh-pages) branch contains the generated [web pages](https://robertoreale.me/linux-day-2015).
+
+The slides are also available in a printable format at [issuu](https://issuu.com/roberto-reale/docs/linux-day-2015) as well as at [SlideShare](https://www.slideshare.net/robertoreale/allombra-del-leviatano-filesystem-in-userspace).
 
 ## English Abstract
 
